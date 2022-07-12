@@ -1,0 +1,61 @@
+@media (max-width: 1130px){
+    .futer-child-info {
+        padding: 30px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 1060px){
+    .input-search {
+        width: 200px;
+    }
+    .futer-child-social, .ul-foter-mani {
+        padding: 30px;
+    }
+}
+@media (max-width: 960px){
+    .input-search {
+        width: 150px;
+    }
+    .registre {
+        width: 80px;
+    }
+    .button-sing {
+        width: 70px;
+    }
+    .form-size, .pas, .user {
+        width: 150px;
+    }
+    .li-clas {
+        margin-right: 20px;
+    }
+}
+@media (max-width: 800px){
+    .futer-child-info {
+        flex-wrap: wrap;
+    }
+    .li-foter-info {
+        margin: 20px;
+    }
+}
+@media (max-width:710px) {
+    .forms-serch {
+        display: none;
+    }
+    .ul-wraper {
+        display: none;
+    }
+    .nav-wraper {
+        padding: 15px;
+    }
+    .burger-wraper {
+        display: block;
+    }
+}
+@media (max-width: 650px){
+    .ul-foter-mani {
+        flex-direction: column;
+    }
+    .sitizen {
+        display: none;
+    }
+}

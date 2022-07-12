@@ -1,0 +1,203 @@
+:root {
+    
+}
+form {
+
+}
+body {
+    background-color: #222229;
+}
+.imig-logo {
+    width: 40px;
+}
+.heder-wraper {
+    background-color: #222229;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.6px;
+}
+
+
+.forms {
+    
+    display: flex;
+    
+}
+/* უზერის და პაროლის ზომების დაყენება */
+.form-size, .pas, .user {
+    width: 200px;
+    height: 40px;
+    background-color: rgb(67, 67, 67);
+    border-radius: 5px;
+    margin-left: 5px;
+
+}
+input {
+    
+    outline: none;
+    border: 1px solid rgb(109, 109, 108);
+    color: white;
+    padding: 0 15px;
+}
+.button-sing {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(69, 186, 57);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+    border: none;
+    color: white;
+}
+/* რეგისტრაციის ღილაკი */
+.registre {
+    width: 150px;
+    height: 40px;
+    background-color: rgb(92, 91, 91);
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+    color: white;
+}
+/* საძიებო სისტება */
+.input-search {
+    background-color: rgb(71, 70, 70);
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-image: url('..//imag/search.png');
+    background-size: 20px;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 0 40px;
+    color: wheat;
+}
+/* სანავიგაციო სექტორი */
+.nav-wraper {
+    background-color: rgb(71, 75, 75);
+}
+.nav-wraper {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    position: relative;
+}
+.ul-wraper {
+    padding: 15px 30px;
+    display: flex;
+}
+.li-clas {
+    margin: 0 50px;
+}
+.a-color {
+    color: #979595;
+    transition: all 0.3s linear;
+}
+/* ბურგერბარის შექმნა */
+.burger-wraper {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(217, 212, 212);
+    border-radius: 4px;
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    display: none;
+}
+.bar1, .bar2, .bar3 {
+    position: absolute;
+    width: 30px;
+    height: 6px;
+    background-color: rgb(73, 72, 72);
+    border-radius: 4px;
+    top: 3px;
+    transition: all 0.1s linear;
+}
+.bar2 {
+    top: 12px;
+}
+.bar3 {
+    top:21px;
+}
+.burger-wraper.active .bar2 {
+    display: none;
+}
+.burger-wraper.active .bar1 {
+    top: 45%;
+   transform: rotate(45deg);
+}
+.burger-wraper.active .bar3 {
+    top: 45%;
+    transform: rotate(-45deg);
+}
+.ul-wraper.active {
+    display: block;
+    width: 100%;
+}
+.a-color.active {
+    display: none;
+}
+.ul-wraper.active .li-clas{
+  margin-top: 20px
+}
+.ul-wraper .li-clas .a-color:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(83, 81, 81);
+    margin-left: 10px;
+
+}
+/* seqcia  . . . . . . . . */
+
+/* სლაიდერი ..................................... */
+.slider-wraper-big {
+    width: 90%;
+    height: 350px;
+    background-color: #979595;
+    margin: 15px auto;
+}
+.slider-wraper-min {
+    width: 90%;
+    height: 200px;
+    background-color: #979595;
+    margin: 15px auto;
+} 
+
+/* ფუტერის ნაწილი */
+.foter-wraper {
+    background-color: aqua;
+}
+.ul-foter-mani, .futer-child-info, .futer-child-social {
+    display: flex;
+    border: 0.4px solid rgb(194, 191, 191);
+    padding: 25px 150px;
+    justify-content: space-around;
+    color: white;
+    background-color:  rgb(71, 75, 75);
+}
+.ul-soc-icon {
+    display: flex;
+}
+.fa-brands {
+    margin-right: 15px;
+    color: white;
+    font-size: 20px;
+}
+h4 {
+    font-size: 10px;
+    margin: 10px;
+    color: #979595;
+}
+.fa-comment-dots {
+    color: rgb(50, 225, 50);
+    font-size: 30px;
+}
+.end {
+    background-color: #222229;
+    color: #979595;
+    padding: 25px;
+    text-align: center;
+}
