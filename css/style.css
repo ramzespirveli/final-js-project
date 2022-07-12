@@ -1,17 +1,19 @@
 :root {
-    
+    --nblack: #222229;
+    --inblack: #181818;
+    --butom: #45ba39;
+    --txcolor: #979595;
+    --wite: #fff;
 }
-form {
 
-}
 body {
-    background-color: #222229;
+    background-color: var(--nblack);
 }
 .imig-logo {
     width: 40px;
 }
 .heder-wraper {
-    background-color: #222229;
+    background-color: var(--nblack);
     padding: 10px 30px;
     display: flex;
     justify-content: space-between;
@@ -33,22 +35,22 @@ body {
     margin-left: 5px;
 
 }
-input {
+.input-sing {
     
     outline: none;
     border: 1px solid rgb(109, 109, 108);
-    color: white;
+    color: var(--wite);
     padding: 0 15px;
 }
 .button-sing {
     width: 100px;
     height: 40px;
-    background-color: rgb(69, 186, 57);
+    background-color: var(--butom);
     cursor: pointer;
     border-radius: 5px;
     margin-left: 5px;
     border: none;
-    color: white;
+    color: var(--wite);
 }
 /* რეგისტრაციის ღილაკი */
 .registre {
@@ -60,11 +62,11 @@ input {
     cursor: pointer;
     border-radius: 5px;
     margin-left: 5px;
-    color: white;
+    color: var(--wite);
 }
 /* საძიებო სისტება */
 .input-search {
-    background-color: rgb(71, 70, 70);
+    background-color: #474646;
     width: 300px;
     height: 40px;
     border-radius: 5px;
@@ -74,11 +76,11 @@ input {
     background-position: 10px 10px;
     background-repeat: no-repeat;
     padding: 0 40px;
-    color: wheat;
+    color: var(--wite);
 }
 /* სანავიგაციო სექტორი */
 .nav-wraper {
-    background-color: rgb(71, 75, 75);
+    background-color: #474b4b;
 }
 .nav-wraper {
     display: flex;
@@ -94,7 +96,7 @@ input {
     margin: 0 50px;
 }
 .a-color {
-    color: #979595;
+    color: var(--txcolor);
     transition: all 0.3s linear;
 }
 /* ბურგერბარის შექმნა */
@@ -156,48 +158,144 @@ input {
 .slider-wraper-big {
     width: 90%;
     height: 350px;
-    background-color: #979595;
+    background-color: var(--txcolor);
     margin: 15px auto;
 }
 .slider-wraper-min {
     width: 90%;
     height: 200px;
-    background-color: #979595;
+    background-color: var(--txcolor);
     margin: 15px auto;
 } 
 
 /* ფუტერის ნაწილი */
-.foter-wraper {
-    background-color: aqua;
-}
+
 .ul-foter-mani, .futer-child-info, .futer-child-social {
     display: flex;
-    border: 0.4px solid rgb(194, 191, 191);
+    border: 0.4px solid #c2bfbf;
     padding: 25px 150px;
     justify-content: space-around;
-    color: white;
-    background-color:  rgb(71, 75, 75);
+    color: var(--wite);
+    background-color:  #474b4b;
 }
 .ul-soc-icon {
     display: flex;
 }
 .fa-brands {
     margin-right: 15px;
-    color: white;
+    color: var(--wite);
     font-size: 20px;
 }
 h4 {
     font-size: 10px;
     margin: 10px;
-    color: #979595;
+    color: var(--txcolor);
 }
 .fa-comment-dots {
-    color: rgb(50, 225, 50);
+    color: var(--butom);
     font-size: 30px;
 }
 .end {
-    background-color: #222229;
-    color: #979595;
+    background-color: var(--nblack);
+    color: var(--txcolor);
     padding: 25px;
     text-align: center;
+}
+
+/* სარეგისტრაციო ფორმა  */
+.header.new-registr, .footer.new-registr{
+display: none;
+}
+.registracia{
+    width: 100%;
+    height: 100%;
+    background-color: #222223;
+    position: absolute;
+    display: none;
+}
+.registracia.new-registr {
+    display: block;
+}
+
+.registtr-form{
+    position: relative;
+    width: 400px;
+    height: 550px;
+    padding: 10px;
+    border: 1px solid rgb(64, 63, 63);
+    background-color:#222223;
+    margin: 60px auto;
+    display: none;
+}
+.registtr-form.new-registr {
+    display: block;
+}
+.registr-head {
+    width: 100%;
+    height: 60px;
+    background-color: #0f0f11;
+    position: fixed;
+    top: 0;
+    color: var(--wite);
+    display: none;
+}
+.registr-head.new-registr{
+    display: block;
+}
+
+.sing-click {
+    width: 80px;
+    height: 40px;
+    background-color: var(--butom);
+    color: var(--wite);
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 5%;
+    position: fixed;
+    top: 10px;
+    right: 30px;
+    cursor: pointer;
+   
+}
+.sing-click1 {
+    position: fixed;
+    top: 20px;
+    right: 130px;
+}
+
+/* ფორმის გალამაზება */
+.input-size {
+    outline: 0;
+    width: 380px;
+    height: 40px;
+    margin-top: 10px;
+    padding: 0 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--inblack);
+    color: var(--wite);
+    font-size: 16px;
+}
+.input-submit {
+    color: var(--wite);
+    font-size: 30px;
+    background-color: var(--butom);
+    cursor: pointer;
+}
+.sitizen {
+    margin-top: 40px;
+    width: 250px;
+    height: 30px;
+    font-size: 16px;
+    background-color: var(--inblack);
+    color: var(--wite);
+    border: none;
+    border-radius: 5px;
+}
+.h2-registr {
+    color: var(--wite);
+    text-align: center;
+}
+label{
+    color: rgb(119, 115, 115);
 }

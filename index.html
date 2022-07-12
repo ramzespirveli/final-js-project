@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="..//css/media.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="heder-wraper">
             <a href="index.html" class="logo"><img class="imig-logo" src="imag/logo-js.webp" alt="logo"></a>
             <form action="#" method="post" class="forms-serch">
@@ -19,10 +19,10 @@
             </form>
             <div class="sing-registr">               
                 <form action="#" method="post" class="forms">                       
-                    <input type="text" id="user-name" name="user-name" placeholder="user" class="user">                  
-                    <input type="password" id="password-name" name="password-name" placeholder="password" class="pas">
-                    <input type="submit" id="submit" class="button-sing" value="SING">                
-                    <div class="registre">REGISTR</div>
+                    <input type="text" id="user-name" name="user-name" placeholder="user" class="user input-sing">                  
+                    <input type="password" id="password-name" name="password-name" placeholder="password" class="pas input-sing">
+                    <input type="submit" id="submit" class="button-sing input-sing" value="SING">                
+                    <div class="registre" id="registr-user">REGISTR</div>
                 </form>
             </div>
         </div>
@@ -44,6 +44,36 @@
         </nav>
 
     </header>
+    <section class="registracia">
+        <div class="registr-head">
+            <div class="sing-click1">უკვა დარეგისტრირებული ხართ?</div>
+            <a href="index.html"><div class="sing-click">SING</div></a>
+        </div>
+        <div class="registtr-form">
+           
+            <form action="">
+                <h2 class="h2-registr">ახალი ანგარიშის შექმნა</h2>
+                <input class="input-size" type="text" id="fname" name="fname" placeholder="შეიყვანეთ სახელი" >
+                <input class="input-size" type="text" id="lname" name="lname" placeholder="შეიყვანეთ გვარი" >
+                <div class="div-radio">
+                    
+                    <input class="radio-butom" type="radio" id="radio1" name="radio"><span></span>
+                    <label for="radio1" >მამრობითი</label>
+                    <input class="radio-butom" type="radio" id="radio2" name="radio">
+                    <label for="radio2" >მდედრობითი</label>
+                </div>
+                    <label for="siti">აირჩიეთ ქალაქი</label>
+                    <select name="siti" id="siti" class="sitizen"></select>
+                    <input class="input-size" type="tel" id="ponenuma" name="ponenuma" placeholder="მობილურის ნომერი">
+                    <input class="input-size" type="text" id="username" name="username" placeholder="მომხმარებელი">
+                    <input class="input-size" type="email" id="meil" name="meil" placeholder="Email@..">
+                    <input class="input-size" type="password" id="password1" name="password1" placeholder="შეიყვანეთ პაროლი">
+                    <input class="input-size" type="password" id="password2" name="password2" placeholder="გაიმეორეთ პაროლი">
+                    <input class="input-size input-submit" type="submit" id="submiti" value="REGISTR">
+                
+            </form>
+        </div>
+    </section>
     <section>
         <div class="slider-wraper-big" id="slider">
 
@@ -53,7 +83,7 @@
         </div>
 
     </section>
-    <footer>
+    <footer class="footer">
         <div class="foter-wraper">
             <div class="futer-child-mani">
                 <ul class="ul-foter-mani">
@@ -86,7 +116,7 @@
                     <h4><i class="fa-solid fa-phone"></i> დაგვიკავშირდით</h4>
                     <h3>(+995) 555 12 34 56</h3>
                 </div>
-                <div class="sitizen">
+                <div class="sitizens">
                     <h4> სამუშაო საათები</h4>
                     <h3>09 : 00 - 20 : 00</h3>
                 </div>
