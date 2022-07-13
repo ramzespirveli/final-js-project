@@ -22,13 +22,22 @@
     .button-sing {
         width: 70px;
     }
-    .form-size, .pas, .user {
-        width: 150px;
-    }
+
     .li-clas {
         margin-right: 20px;
     }
 }
+@media (max-width: 850px){
+    .form-size, .pas, .user {
+        display: none;
+    }
+    .input-search {
+        width: 250px;
+    }
+    .dialog-input {
+        display: block;
+    }
+    }
 @media (max-width: 800px){
     .futer-child-info {
         flex-wrap: wrap;

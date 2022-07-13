@@ -299,3 +299,61 @@ display: none;
 label{
     color: rgb(119, 115, 115);
 }
+/* dialog */
+
+.dialog-input, .dialog-input1 {
+    width: 300px;
+    height: 40px;
+    background-color: var(--nblack);
+    border: none;
+    border-radius: 5px;
+    color: var(--txcolor);
+    font-size: 15px;
+    padding: 0 15px;
+    transition: all 200ms linear;
+    outline: none;
+}
+.dialog-input1 {
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.dialog-input1:hover {
+    background-color: #0f9200;
+    font-size: 30px;
+
+}
+
+.modal {
+    position: relative;
+    background-color: #000000;
+    border: none;
+    animation: zoom 0.5s forwards;
+}
+.fa-xmark {
+    color: var(--txcolor);
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+.dialog-input,  .dialog-head {
+    margin: 10px 0;
+    color: var(--txcolor);
+    font-size: 20px;
+    text-align: center;
+}
+/* დიალოგური ბლოკის ანიმაცია */
+@keyframes zoom {
+    0%{
+        transform: scale(0.2);
+    }
+    50%{
+        transform: (1.2);
+    }
+    100%{
+        transform: (1);
+    }
+}

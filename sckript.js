@@ -16,6 +16,7 @@ registr.addEventListener('click',function(){
     document.querySelector(".registr-head").classList.add('new-registr')
    
 })
+// ქალაქების მასივი იყრება ასარჩევ ბლოკში
 let siti = ["თბილისი","რუსთავი","ქუთაისი","ზესტაფონი","სუგდიდი","ბათუმი","ქობულეთი"];
 console.log(siti);
 let select = document.getElementById('siti')
@@ -28,3 +29,15 @@ function setSiti(){
     });
 }
 setSiti();
+// დიალოგური ფანჯარის გამოჩენა იმ შემთხვევაში თუ პაროლი არასწორად აარის შეყვანილი ან არ ახსოვთ
+
+let clik = document.getElementById('opens');
+let opens = document.querySelector('.modal');
+let clous = document.querySelector('.fa-xmark');
+
+clik.addEventListener('click',()=>{
+    opens.showModal();
+})
+clous.addEventListener('click',()=>{
+    opens.close();
+})
