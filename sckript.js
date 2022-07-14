@@ -1,3 +1,4 @@
+"use strict";
 // ბურგერ ბარი
 let wraperDiv = document.querySelector('.burger-wraper');
 wraperDiv.addEventListener('click',function(){
@@ -14,7 +15,6 @@ registr.addEventListener('click',function(){
     document.querySelector(".footer").classList.add('new-registr')
     document.querySelector(".registtr-form").classList.add('new-registr')
     document.querySelector(".registr-head").classList.add('new-registr')
-   
 })
 // ქალაქების მასივი იყრება ასარჩევ ბლოკში
 let siti = ["თბილისი","რუსთავი","ქუთაისი","ზესტაფონი","სუგდიდი","ბათუმი","ქობულეთი"];
@@ -41,3 +41,34 @@ clik.addEventListener('click',()=>{
 clous.addEventListener('click',()=>{
     opens.close();
 })
+
+//ღილაკზე მაუს ივენთი ჯავასკრიპტიდან კლასის დამატებით
+document.querySelector('[type="submit"]').addEventListener('mouseover',function(e){
+    e.target.classList.add('js-over');
+   console.log(event.target);
+
+});
+document.querySelector('[type="submit"]').addEventListener('mouseout',function(e){
+    e.target.classList.remove('js-over');
+});
+
+// ინპუტს უცვლის ფონის ფერს
+// function inputBackgColor(){
+//     document.querySelector('input').addEventListener('focus',function(e){
+//         e.target.style.background = 'red';
+//             })
+// }
+
+let v= document.getElementById('search');
+ 
+
+//  ვანულებთ ინპუტის დეფაულტ მნიშვნელობებს
+let forma = document.querySelector('.forms');
+forma.addEventListener('submit',function(e){
+        e.preventDefault();      
+    })
+
+// document.getElementById('[form]').addEventListener('submit',function(e){
+//         e.preventDefault();
+      
+//     })

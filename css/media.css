@@ -28,16 +28,15 @@
     }
 }
 @media (max-width: 850px){
-    .form-size, .pas, .user {
-        display: none;
+    .pas, .user {
+        width: 100px;
     }
-    .input-search {
-        width: 250px;
-    }
+
     .dialog-input {
         display: block;
     }
     }
+
 @media (max-width: 800px){
     .futer-child-info {
         flex-wrap: wrap;

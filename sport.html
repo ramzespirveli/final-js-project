@@ -8,34 +8,25 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/post.css">
     <link rel="stylesheet" href="..//css/media.css">
 </head>
-<body class="body-color">
+<body>
     <header class="header">
         <div class="heder-wraper">
             <a href="index.html" class="logo"><img class="imig-logo" src="imag/home.png" alt="logo"></a>
             <form action="#" class="forms-serch">
                 <input type="text" id="search" class="input-search" name="search" placeholder="Search..">
-            </form>
-            <div >               
-                <form action="#" class="forms">                       
-                    <input type="text" id="user-name" name="user-name" placeholder="user" class="user input-sing" >                  
-                    <input type="password" id="password-name" name="password-name" placeholder="password" class="pas input-sing">
-                    <input type="submit" id="submit" class="button-sing input-sing" value="SING">                
-                    <div class="registre" id="registr-user">REGISTR</div>
-                </form>
-            </div>
-            <div class="get-pass" id="opens">პაროლის აღდგენა</div>
-        </div>
-      
+            </form>  
+        </div>   
         <nav >
-            <div class="nav-wraper">
+            <div class="nav-wraper nav-post">
                 <a class="a-color" href=""><img src="imag/world2.png" class="world-logo" alt="logo"></a>
                 <ul class="ul-wraper">
                     <li class="li-clas"><a class="a-color" href="index.html">HOME</a></li>
                     <li class="li-clas"><a class="a-color" href="sport.html">SPORT</a></li>
                     <li class="li-clas"><a class="a-color" href="post.html">POST</a></li>
-                    <li class="li-clas"><a class="a-color" href="">CONTACT</a></li>
+                    <li class="li-clas"><a class="a-color" href="#">CONTACT</a></li>
                 </ul>
                 <div class="burger-wraper">
                     <div class="bar1 active" ></div>
@@ -43,60 +34,13 @@
                     <div class="bar3"></div>
                 </div>
             </div>
-        </nav>
-
-    </header>
-
-    <section class="registracia">
-        <div class="registr-head">
-            <div class="sing-click1">უკვა დარეგისტრირებული ხართ?</div>
-            <a href="index.html"><div class="sing-click">SING</div></a>
-        </div>
-        
-        <div class="registtr-form">
            
-            <form action="">
-                <h2 class="h2-registr">ახალი ანგარიშის შექმნა</h2>
-                <input class="input-size" type="text" id="fname" name="fname" placeholder="შეიყვანეთ სახელი" >
-                <input class="input-size" type="text" id="lname" name="lname" placeholder="შეიყვანეთ გვარი" >
-                <div class="div-radio">
-                    
-                    <input class="radio-butom" type="radio" id="radio1" name="radio"><span></span>
-                    <label for="radio1" >მამრობითი</label>
-                    <input class="radio-butom" type="radio" id="radio2" name="radio">
-                    <label for="radio2" >მდედრობითი</label>
-                </div>
-                    <label for="siti">აირჩიეთ ქალაქი</label>
-                    <select name="siti" id="siti" class="sitizen"></select>
-                    <input class="input-size" type="tel" id="ponenuma" name="ponenuma" placeholder="მობილურის ნომერი">
-                    <input class="input-size" type="text" id="username" name="username" placeholder="მომხმარებელი">
-                    <input class="input-size" type="email" id="meil" name="meil" placeholder="Email@..">
-                    <input class="input-size" type="password" id="password1" name="password1" placeholder="შეიყვანეთ პაროლი">
-                    <input class="input-size" type="password" id="password2" name="password2" placeholder="გაიმეორეთ პაროლი">
-                    <input class="input-size input-submit" type="submit" id="submiti" value="REGISTR">
-                
-            </form>
-        </div>
-        
-    </section>
-    <section>
-
-            <dialog  class="modal">
-                <h3 class="dialog-head">პაროლის აღდგენა</h3>
-               <i class="fa-solid fa-xmark"></i>
-                <form action="" class="form-dialog">
-                    <input type="email" id="sendemail" name="sendemail" class="dialog-input" placeholder="შეიყვანეთი თქვენი Email">
-                    <br><br><input type="submit" id="sendsubmit" name="sendsubmit" class="dialog-input1 " value="პაროლის აღდგენა">
-
-                </form>
-                    
-            </dialog>
-
-        <div class="slider-wraper-big" id="slider">
-
-        </div>
-        <div class="slider-wraper-min" id="slider">
-
+        </nav>
+     
+    </header>
+    <section class="section-post">
+        <div>
+            
         </div>
 
     </section>
@@ -143,6 +87,6 @@
         <div class="end">კომპანიის ყველა უფლება დაცულია</div>
     </footer>
 
-    <script src="sckript.js"></script>
+    <script src="post.js"></script>
 </body>
 </html>

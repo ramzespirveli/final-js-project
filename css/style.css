@@ -6,10 +6,13 @@
     --wite: #fff;
 }
 
-body {
+.body-color {
     background-color: var(--nblack);
 }
 .imig-logo {
+    width: 40px;
+}
+.world-logo {
     width: 40px;
 }
 .heder-wraper {
@@ -64,6 +67,9 @@ body {
     margin-left: 5px;
     color: var(--wite);
 }
+.registre:hover{
+    box-shadow:  1px 1px 3px rgb(120, 119, 118);
+}
 /* საძიებო სისტება */
 .input-search {
     background-color: #474646;
@@ -78,9 +84,22 @@ body {
     padding: 0 40px;
     color: var(--wite);
 }
+/* parolis axdgena */
+.get-pass {
+    color: rgb(144, 41, 41);
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 55px;
+    right: 30px;
+}
+.get-pass:hover {
+    color: red;
+}
 /* სანავიგაციო სექტორი */
 .nav-wraper {
     background-color: #474b4b;
+    margin-top: 15px;
 }
 .nav-wraper {
     display: flex;
@@ -139,6 +158,7 @@ body {
 .ul-wraper.active {
     display: block;
     width: 100%;
+    
 }
 .a-color.active {
     display: none;
@@ -299,7 +319,7 @@ display: none;
 label{
     color: rgb(119, 115, 115);
 }
-/* dialog */
+/* დიალოგური ფანჯარა პაროლის აღსადგენად*/
 
 .dialog-input, .dialog-input1 {
     width: 300px;
@@ -326,7 +346,7 @@ label{
 
 .modal {
     position: relative;
-    background-color: #000000;
+    background-color: #303030;
     border: none;
     animation: zoom 0.5s forwards;
 }
@@ -355,5 +375,17 @@ label{
     }
     100%{
         transform: (1);
+    }
+}
+.js-over {
+animation: sab 0.2s linear forwards;
+}
+@keyframes sab {
+    0% {
+        background-color: #45ba39;
+    }
+    100% {
+        background-color: #3cd82a;
+        box-shadow: 1px 1px 3px #3cd82a;;
     }
 }
