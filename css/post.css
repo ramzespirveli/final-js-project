@@ -20,23 +20,24 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
    
 }
 .div-post-wraper {
-    padding: 20px 200px;
+    padding: 20px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
-.post-imig {
-    width: 610px;
+.post-text {
+    width: 60%;
     height: 400px;
     background-color: silver;
     
 }
-.post-text {
+.post-imig {
     padding: 15px;
-    width: 320px;
-    height: 400px;
+    width: 30%;
+    height: 200px;
     background-color: silver;
     overflow: auto;
     
@@ -72,6 +73,7 @@
     transition: all 0.5s linear;
 
 }
+
  .set-post:hover {
     color: black;
     background-color: #dedfdf;
@@ -85,3 +87,57 @@
     background-color: #dedfdf;
 } 
 
+.post-text {
+    position: relative;
+    overflow: auto;
+}
+
+.overflow {
+   
+    background-color: aqua;
+    padding: 20px;
+    margin: 5px 0;
+    
+}
+.popapi {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    padding: 130px 30px;
+    display: none;
+    
+}
+
+.popapi.pop-activ {
+    display: block;
+}
+.close {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    top: 110px;
+    right: 10px;
+}
+.del-baton {
+    margin-top: 15px;
+}
+.form-legend {
+    padding: 10px;
+}
+.title-input {
+    height: 40px;
+    margin: 3px 0;
+}
+.title-input, .area-input {
+    width: 100%;
+    margin: 3px 0;
+}
+ fieldset {
+    border: 2px;
+    box-shadow: 1px 1px 6px black;
+   color: rgb(0, 0, 0);
+   padding: 5px;
+}
