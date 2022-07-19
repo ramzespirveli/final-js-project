@@ -1,0 +1,61 @@
+.sport-slider {
+    position: relative;
+    width: 90%;
+    height: 320px;
+    background-color: var(--txcolor);
+    margin: 15px auto;
+    top: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.sport-slider-min {
+    position: relative;
+    width: 90%;
+    height: 150px;
+    background-color: blue;
+    margin: 15px auto;
+    padding: 5px;
+}
+
+.slider-icon {
+    position: absolute;
+    color: rgb(141, 138, 138);
+    font-size: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
+#slider-left {
+    left: 5px;
+}
+#slider-right {
+    right: 5px;
+}
+.slider-mini {
+    
+    width: 100%;
+    background-color: blue;
+}
+.imig-class {
+    display: inline-block;
+    width: 20%;
+    height: 140px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sport-slider-title {
+    position: absolute;
+    color: white;
+    left: 20px;
+    top: 10px;
+    font-size: 30px;
+}
+.fa-solid:hover {
+    font-size: 40px;
+    box-shadow: 1px 2px 10px white;
+    transition: all 0.2s linear;
+}

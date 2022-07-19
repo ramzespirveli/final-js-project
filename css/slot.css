@@ -1,0 +1,26 @@
+.slot_logo {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+.icon_wraper {
+    width: 320px;
+    height: 320px;
+    display: inline-block;
+    position: relative;
+}
+.slot_icon {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    margin-left: 10px;
+}
+.slot_title {
+    color: white;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 20px;
+    z-index: 2;
+}

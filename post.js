@@ -1,176 +1,13 @@
 
-// function getajaxi(){
-//     let reques = new XMLHttpRequest();
-//  reques.open('GET','https://reqres.in/api/users?page=2');
 
-//  reques.addEventListener('load',function(){
-
-//     let divi = document.querySelector('.post-text');
-
-
-//     let responsData = JSON.parse(this.responseText)
-//     responsData.data.forEach(element => {
-//         let div = document.createElement('div');
-//         div.textContent = element.email;
-//         divi.appendChild(div);
-        
-//     });
-
-//  });
-//     reques.send();
-// }
-// getajaxi();
-
-// fetch('https://reqres.in/api/users?page=2',{
-//     method: 'GET'
-// })
-// .then(function(respons){
-//     if(respons.status != 200){
-//         throw respons.status;
-//     }
-//     return respons.json();
-// })
-// .then(function(responsData){
-//     let fragment = document.createDocumentFragment();
-//     responsData.data.forEach(element => {
-//        let divv = document.createElement('div');
-//         divv.textContent = element.email;
-//         fragment.appendChild(divv);
-//         document.querySelector('.post-text').appendChild(fragment);
-//     });
-
-// })
-// .catch(function(error){
-//     console.log(error);
-// })
-
-// let curent = 1;
-
-// function getUser(page){
-
-//     fetch('https://reqres.in/api/users?page=' + page ,{
-//      method: 'GET'
-//  })
-//  .then(function(respons){
-//     if(respons.status != 200){
-//     throw respons.status;
-//     }
-//     return respons.json();
-//  })
-// .then(function(responsData){
-//     let fragment = document.createDocumentFragment();
-//     responsData.data.forEach(element => {
-//        let divv = document.createElement('div');
-//         divv.textContent = element.email;
-//         fragment.appendChild(divv);
-//         document.querySelector('.post-text').appendChild(fragment);
-//     });
-
-// })
-//  .catch(function(error){
-//     console.log(error);
-//  })
- 
-
-// }
-
-// document.querySelector('.post-imig').addEventListener('click', ()=>{
-//     curent ++;
-//     getUser(curent);
-// })
-
-// getUser(curent);
-
-/////////////////////////////////////////////////////////////////////////////////////////
-
-// let divWraper = document.querySelector('.post-text');
-// let ur = 'https://jsonplaceholder.typicode.com/posts';
-
-// function ajaxi(URL, colback){
-//     let requesti = new XMLHttpRequest();
-
-// requesti.open('GET',URL)
-// requesti.addEventListener('load',function(){
-    
-//     let data = JSON.parse(requesti.responseText);
-//         colback(data);
-
-// });
-//     requesti.send();
-// }
-
-// function ajx_function(data){
-//     data.forEach(element => { 
-
-//         addPost(element);
-
-//    });
-// }
-
-
-// function addPost(item){
-//     let divteg = document.createElement('div');
-//     divteg.classList.add('overflow');
-//     divteg.setAttribute('data-id',item.id);
-
-//     let h2teg = document.createElement('h2');
-//     h2teg.textContent = item.id;
-
-//     let h3teg = document.createElement('h3');
-//     h3teg.textContent = item.title;
-
-//     divteg.appendChild(h2teg);
-//     divteg.appendChild(h3teg);
-
-//     divteg.addEventListener('click',function(){
-//         let id = divteg.getAttribute('data-id');
-
-//         popapi(id);
-//         console.log(id);
-//     })
-
-//     divWraper.appendChild(divteg);
-// };
-// let contenti = document.querySelector('.popapi');
-// let contentidata = document.querySelector('.popInfo');
-
-// function popapi(item){
-//     contenti.classList.add('pop-activ');
-//     let url = `https://jsonplaceholder.typicode.com/posts/${item}`;
-//     ajaxi(url,function(data){
-//         addPostInfo(data);
-//         console.log(data);
-//     });
-
-// }
-// document.querySelector('.close').addEventListener('click',function(){
-//     contenti.classList.remove('pop-activ')
-    
-// })
-
-
-// function addPostInfo(item){
-//     let spanTeg = document.createElement('span');
-//     spanTeg.textContent = item.userId;
-
-//     let h3Teg = document.createElement('h3');
-//     h3Teg.textContent = item.title;
-
-//     let pTeg = document.createElement('p');
-//     pTeg.textContent = item.body;
-
-//     contentidata.innerHTML = '';1
-
-//     contentidata.appendChild(spanTeg);
-//     contentidata.appendChild(h3Teg);
-//     contentidata.appendChild(pTeg);
-
-// }
-
-// ajaxi(ur,function(data){
-//     ajx_function(data);
-// });
-
+"use strict";
+// ბურგერ ბარი
+let wraperDiv = document.querySelector('.burger-wraper');
+wraperDiv.addEventListener('click',function(){
+    wraperDiv.classList.toggle('active');
+    document.querySelector(".ul-wraper").classList.toggle('active');
+    document.querySelector(".a-color").classList.toggle('active');
+})
 /////////////////////////////////////////////////////////
 
 let divWraper = document.querySelector('.post-text');
@@ -220,7 +57,12 @@ function ajaxi(url,colback){
         delBaton.addEventListener('click',function(e){
             e.stopPropagation();
             let id = delBaton.getAttribute('data-id');
-            deletePost(id)
+            let url = `https://jsonplaceholder.typicode.com/posts/${id}`;
+
+            fetch(url,{
+                method: 'DELETE',
+            })
+            .then(() => divPost.remove())
         })
         // კლიკი იძახებს პოპაპის გამოსატან ფუნქციას
         divPost.addEventListener('click',function(){
@@ -243,27 +85,7 @@ function ajaxi(url,colback){
             setPopap(item);
         })
     }
-    //ფუნქცია რომელიც შლის პოსტს
-    function deletePost(id){
-        let url = `https://jsonplaceholder.typicode.com/posts/${id}`;
 
-        fetch(url,{
-            method: 'DELETE',
-        })
-       .then(function(responsi){
-        if (responsi.status != 200){
-            throw responsi.status;
-        }
-        return responsi.JSON();
-       })
-       .then(function(responsData){
-        console.log(responsData);
-       })
-       .catch(function(eror){
-            alert('eror server');
-       })
-       
-    }
 
     //ხურავს პოპაპს
     document.querySelector('.close').addEventListener('click',function(){
@@ -315,3 +137,70 @@ addForm.addEventListener('submit',function(e){
     console.log(formData);
    
 })
+
+///////////////////////////////////////////////////////////
+
+let nextclick = document.querySelector('.next');
+let prevclick = document.querySelector('.previu');
+let newDiv = document.querySelector('.post-imig');
+let url2 = 'https://reqres.in/api/users?page=2';
+let curent = 0;
+
+
+
+
+    fetch(url2,{
+        method: 'GET',
+    })
+    .then(function(parametr){
+     
+        return parametr.json();
+    })
+    .then(function(elementDta){
+        
+        addimig(elementDta.data);
+
+        nextclick.addEventListener('click',function(){
+            if (curent == elementDta.per_page - 2) {
+                return;
+            }
+            curent += 2;
+            addimig(elementDta.data);
+
+        })
+        prevclick.addEventListener('click',function(){
+            if (curent == 0) {
+                return;
+            }
+            curent -= 2;
+            addimig(elementDta.data);
+
+        })
+
+    })
+    .catch(function(error){
+        
+    })
+function addimig(item){
+    newDiv.innerHTML = '';
+    for (let i = curent; i < curent + 2; i++ ){
+        let a_teg = document.createElement('a');
+        a_teg.classList.add('a-class_imig');
+        a_teg.setAttribute('href','facebook.com')
+    
+        let div_teg = document.createElement('div');
+        div_teg.classList.add('div-imig');
+        div_teg.style.backgroundImage = `url(${item[i].avatar})`;
+    
+        let span_teg = document.createElement('span');
+        span_teg.classList.add('span_name');
+        span_teg.textContent = item[i].first_name + " " + item[i].last_name;
+    
+        a_teg.appendChild(div_teg);
+        a_teg.appendChild(span_teg);
+    
+        newDiv.appendChild(a_teg);
+    }
+
+
+}
