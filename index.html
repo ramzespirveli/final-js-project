@@ -16,11 +16,11 @@
     <header class="header">
         <div class="heder-wraper">
             <a href="index.html" class="logo"><img class="imig-logo" src="imag/home.png" alt="logo"></a>
-            <form action="#" class="forms-serch">
+            <form action="#" class="forms-serch" method="POST">
                 <input type="text" id="search" class="input-search" name="search" placeholder="Search..">
             </form>
             <div>
-                <form action="#" class="forms">
+                <form action="#" class="forms" method="POST">
                     <input type="text" id="user-name" name="user-name" placeholder="user" class="user input-sing">
                     <input type="password" id="password-name" name="password-name" placeholder="password"
                         class="pas input-sing">
@@ -60,26 +60,42 @@
 
         <div class="registtr-form">
 
-            <form action="">
+            <form action="" method="POST" id="registr_form">
                 <h2 class="h2-registr">ახალი ანგარიშის შექმნა</h2>
                 <input class="input-size" type="text" id="fname" name="fname" placeholder="შეიყვანეთ სახელი">
+                <span class="span-stil" id="eror_fname"></span>
                 <input class="input-size" type="text" id="lname" name="lname" placeholder="შეიყვანეთ გვარი">
+                <span class="span-stil" id="eror_lname"></span>
                 <div class="div-radio">
 
-                    <input class="radio-butom" type="radio" id="radio1" name="radio"><span></span>
-                    <label for="radio1">მამრობითი</label>
+                    <input class="radio-butom" type="radio" id="radio1" name="radio">
+                    <label for="radio1">მამრობითი</label> 
                     <input class="radio-butom" type="radio" id="radio2" name="radio">
                     <label for="radio2">მდედრობითი</label>
+                    <span class="span-stil" id="eror_radio"></span>
                 </div>
                 <label for="siti">აირჩიეთ ქალაქი</label>
                 <select name="siti" id="siti" class="sitizen"></select>
                 <input class="input-size" type="tel" id="ponenuma" name="ponenuma" placeholder="მობილურის ნომერი">
+                <span class="span-stil" id="eror_ponenuma"></span>
                 <input class="input-size" type="text" id="username" name="username" placeholder="მომხმარებელი">
+                <span class="span-stil" id="eror_username"></span>
                 <input class="input-size" type="email" id="meil" name="meil" placeholder="Email@..">
+                <span class="span-stil" id="eror_meil"></span>
                 <input class="input-size" type="password" id="password1" name="password1"
                     placeholder="შეიყვანეთ პაროლი">
-                <input class="input-size" type="password" id="password2" name="password2"
-                    placeholder="გაიმეორეთ პაროლი">
+               <div  class="befori">
+                <div class="pas2-divi">
+                    <input class="input-size" type="password" id="password2" name="password2"
+                    placeholder="გაიმეორეთ პაროლი" >
+                    <span class="span-stil" id="eror_password2"></span>
+                </div>
+
+                <div><i id="iconId" class="fa-solid fa-eye"></i></div>
+               </div>
+                    <input type="checkbox" id="checkbox" name="checkbox">
+                    <label for="checkbox"> ეთანხმებით პირობებს?</label>
+                    <span class="span-stil" id="eror_checkbox"></span>
                 <input class="input-size input-submit" type="submit" id="submiti" value="REGISTR">
 
             </form>
@@ -91,7 +107,7 @@
         <dialog class="modal">
             <h3 class="dialog-head">პაროლის აღდგენა</h3>
             <i class="fa-solid fa-xmark"></i>
-            <form action="" class="form-dialog">
+            <form action="" class="form-dialog" method="POST">
                 <input type="email" id="sendemail" name="sendemail" class="dialog-input"
                     placeholder="შეიყვანეთი თქვენი Email">
                 <br><br><input type="submit" id="sendsubmit" name="sendsubmit" class="dialog-input1 "

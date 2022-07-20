@@ -240,7 +240,7 @@ display: none;
 .registtr-form{
     position: relative;
     width: 400px;
-    height: 550px;
+    height: auto;
     padding: 10px;
     border: 1px solid rgb(64, 63, 63);
     background-color:#222223;
@@ -408,4 +408,30 @@ animation: sab 0.2s linear forwards;
         background-color: #3cd82a;
         box-shadow: 1px 1px 3px #3cd82a;;
     }
+}
+
+/* form */
+.span-stil {
+    color: rgb(204, 122, 122);
+    display: block;
+}
+#password::after {
+    content: 'raraca ';
+    color: white;
+    
+}
+.befori {
+    position: relative;
+    margin-bottom: 25px;
+
+    height: 40px;
+
+}
+.fa-eye {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    color: rgb(6, 166, 168);
+    font-size: 20px;
+    cursor: pointer;
 }
