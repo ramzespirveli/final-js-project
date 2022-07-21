@@ -162,23 +162,32 @@ let shoPas = document.getElementById('password2');
    } 
 eye.addEventListener('click',shoPassword);
 
-// email -is validacia
+// email -is validacia    sendemail
 
 function emailValid(){
     let email = document.getElementById('meil').value;
     let inputColor = document.querySelector('#meil');
-    let spanEmail = document.getElementById('eror_meil');
+    // let spanEmail = document.getElementById('eror_meil');
     let validator = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{1,}))$/;
 
     if (email.match(validator)){
         inputColor.style.border = '1px solid green'
-
     }
     else {
+        inputColor.style.border = '1px solid red'      
+    }
+}
+function emailValid2(){
+    let email = document.getElementById('sendemail').value;
+    let inputColor = document.querySelector('#sendemail');
+    // let spanEmail = document.getElementById('eror_meil');
+    let validator = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{1,}))$/;
 
-        inputColor.style.border = '1px solid red'
-        
-
+    if (email.match(validator)){
+        inputColor.style.border = '1px solid green'
+    }
+    else {
+        inputColor.style.border = '1px solid red'      
     }
 }
 
@@ -198,6 +207,7 @@ document.getElementById('form-submit').addEventListener('submit',function(e){
     e.preventDefault(); 
     let users = document.getElementById('user-name').value; 
      Cookies.set('user',users);
+     
     e.target.submit();
 })
 
