@@ -44,7 +44,6 @@ clous.addEventListener('click',()=>{
 //ღილაკზე მაუს ივენთი ჯავასკრიპტიდან კლასის დამატებით
 document.querySelector('[type="submit"]').addEventListener('mouseover',function(e){
     e.target.classList.add('js-over');
-   console.log(event.target);
 
 });
 document.querySelector('[type="submit"]').addEventListener('mouseout',function(e){
@@ -125,6 +124,8 @@ forma_submit.addEventListener('submit',function(e){
             if (Object.keys(eror).length == 0){
                 form.submit();
             }
+
+
     })
 
 // პაროლი გამოჩნდება ტექსტური სახით
@@ -133,7 +134,20 @@ let shoPas1 = document.getElementById('password1');
 let shoPas = document.getElementById('password2');
 
 
-function shoPassword(){
+// function shoPassword(){
+//     if (shoPas.type == 'password'){
+//         shoPas.setAttribute('type','text');
+//         shoPas1.setAttribute('type','text');
+//         eye.classList.add('fa-eye-slash');
+//     } 
+//     else {
+//         eye.classList.remove('fa-eye-slash')
+//         shoPas.setAttribute('type','password');
+//         shoPas1.setAttribute('type','password');
+//     }
+// }
+// ...............................................
+ let shoPassword = () => {
     if (shoPas.type == 'password'){
         shoPas.setAttribute('type','text');
         shoPas1.setAttribute('type','text');
@@ -144,17 +158,50 @@ function shoPassword(){
         shoPas.setAttribute('type','password');
         shoPas1.setAttribute('type','password');
     }
-}
-// ........................................................ ამ ფუნქციამ არ იმიშავა!!!!!!
-// shoPassword = () => {
-//     if (shoPas.type == 'password'){
-//         shoPas.setAttribute('type','text');
-//         eye.classList.add('fa-eye-slash');
-//     } 
-//     else {
-//         eye.classList.remove('fa-eye-slash')
-//         shoPas.setAttribute('type','password');
-//     }
 
-//    } 
+   } 
 eye.addEventListener('click',shoPassword);
+
+// email -is validacia
+
+function emailValid(){
+    let email = document.getElementById('meil').value;
+    let inputColor = document.querySelector('#meil');
+    let spanEmail = document.getElementById('eror_meil');
+    let validator = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{1,}))$/;
+
+    if (email.match(validator)){
+        inputColor.style.border = '1px solid green'
+
+    }
+    else {
+
+        inputColor.style.border = '1px solid red'
+        
+
+    }
+}
+
+
+// localStorage
+
+// let counterlUser = localStorage.getItem('user');
+// let newItem;
+// if (!counterlUser)
+//     newItem = document.getElementById('username').value;
+
+// localStorage.setItem('user', newItem);
+
+//coock
+
+document.getElementById('form-submit').addEventListener('submit',function(e){
+    e.preventDefault(); 
+    let users = document.getElementById('user-name').value; 
+     Cookies.set('user',users);
+    e.target.submit();
+})
+
+let getCook = Cookies.get('user');
+if (getCook){
+    document.getElementById('user-name').value = getCook;
+}

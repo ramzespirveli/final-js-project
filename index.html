@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="..//css/media.css">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
 </head>
 
 <body class="body-color">
@@ -20,7 +21,7 @@
                 <input type="text" id="search" class="input-search" name="search" placeholder="Search..">
             </form>
             <div>
-                <form action="#" class="forms" method="POST">
+                <form action="#" class="forms" id="form-submit" method="POST">
                     <input type="text" id="user-name" name="user-name" placeholder="user" class="user input-sing">
                     <input type="password" id="password-name" name="password-name" placeholder="password"
                         class="pas input-sing">
@@ -80,7 +81,7 @@
                 <span class="span-stil" id="eror_ponenuma"></span>
                 <input class="input-size" type="text" id="username" name="username" placeholder="მომხმარებელი">
                 <span class="span-stil" id="eror_username"></span>
-                <input class="input-size" type="email" id="meil" name="meil" placeholder="Email@..">
+                <input class="input-size" type="email" id="meil" name="meil" placeholder="Email@.." onkeydown="emailValid()">
                 <span class="span-stil" id="eror_meil"></span>
                 <input class="input-size" type="password" id="password1" name="password1"
                     placeholder="შეიყვანეთ პაროლი">
@@ -109,7 +110,7 @@
             <i class="fa-solid fa-xmark"></i>
             <form action="" class="form-dialog" method="POST">
                 <input type="email" id="sendemail" name="sendemail" class="dialog-input"
-                    placeholder="შეიყვანეთი თქვენი Email">
+                    placeholder="შეიყვანეთი თქვენი Email" onkeydown="emailValid()">
                 <br><br><input type="submit" id="sendsubmit" name="sendsubmit" class="dialog-input1 "
                     value="პაროლის აღდგენა">
 
