@@ -3,14 +3,16 @@
     height: auto;
     padding: 20px;
 }
+
 .icon_wraper {
     width: 320px;
     height: 320px;
     display: inline-block;
     position: relative;
+
 }
 .aTeg.activserch {
-    display: none;
+    display: none
 }
 .slot_icon {
     position: absolute;
